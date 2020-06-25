@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt -qq install neovim
-sudo apt -qq install python3-dev cmake
+sudo apt -qq install neovim -y
+sudo apt -qq install python3-dev cmake -y
 
 
 # Copy Files
@@ -18,3 +18,6 @@ nvim -u ~/.config/nvim/init.vim -c 'PlugInstall' +qall
 
 # Install YCM
 ~/.vim/plugged/YouCompleteMe/install.py
+
+echo "alias vi=\"nvim\"" >> ~/.bash_aliases                                          
+echo "alias vim=\"nvim\"" >> ~/.bash_aliases                                          

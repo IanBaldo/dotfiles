@@ -11,11 +11,21 @@ sudo apt -qq install curl -y
 sudo apt -qq install chromium-browser -y
 
 # Add custom aliases
-echo "#Custom Alias [BALDO]" >> ~/.bashrc
-echo "alias vim=\"nvim\"" >> ~/.bashrc                                          
-echo "alias gits=\"git status\"" >> ~/.bashrc                                          
-echo "alias x=\"exit\"" >> ~/.bashrc                                          
+echo "#Custom Alias [BALDO]" >> ~/.bash_aliases
+echo "alias gits=\"git status\"" >> ~/.bash_aliases                                          
+echo "alias x=\"exit\"" >> ~/.bash_aliases                                          
 
-bash $ABSOLUTE_PATH/nvim/setup.sh $ABSOLUTE_PATH
+if [ $# -eq 0 ]; then
+    # Install my default configuration
+    bash $ABSOLUTE_PATH/vim/setup.sh $ABSOLUTE_PATH
+else
+    for var in "$@"
+    do
+        if [ -d "$var" ]; then
+            bash $ABSOLUTE_PATH/$var/setup.sh $ABSOLUTE_PATH
+        fi
+    done
+fi
+
 
 source ~/.bashrc
