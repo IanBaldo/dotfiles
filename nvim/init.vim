@@ -8,13 +8,13 @@ set expandtab "TAB to Spaces
 set nu rnu "Relative Line numbers
 set nowrap "No wrapping lines
 set smartcase "Searching is case insensitive until first capital
-set noswapfile "???
-set nobackup "???
+set noswapfile "doesn't create the .swp file
+set nobackup
 set undodir=~/.config/nvim/undodir "Undo directory
 set undofile
 set incsearch "Show results as you search
 
-set colorcolumn=80
+set colorcolumn=90
 highlight ColorColumn ctermbg=0 guibg=lightgrey "Highlight the 80 char mark
 
 
