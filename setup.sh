@@ -7,9 +7,10 @@ ABSOLUTE_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Install
 echo "Installing software..."
 sudo apt update
-sudo apt -qq install build-essential
+sudo apt -qq install build-essential -y
 sudo apt -qq install curl -y
 sudo apt -qq install chromium-browser -y
+sudo apt -qq install node -y
 
 # Add custom aliases
 echo "#Custom Alias [BALDO]" >> ~/.bash_aliases

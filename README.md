@@ -8,11 +8,11 @@ bash setup.sh
 '''
 
 ## What will this install on my machine? (not necessarily in this order)
-+ neovim
-+ git
++ build-essential
 + curl
++ node
 + chromium-browser
-+ python3-dev and cmake (dependencies from YCM Plugin)
++ python3-dev and cmake (dependencies for YCM Plugin)
 + Plug (Plugin manager for VIM)
 
 ## List of Plugins
