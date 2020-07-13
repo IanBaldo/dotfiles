@@ -40,9 +40,8 @@ set background=dark
 let mapleader=" "
 
 
-"fzf keybinds
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-g> :GFiles<CR>
-nnoremap <silent> <C-q> :Buffers<CR>
-nnoremap <C-f> :Rg  
-
+"normal mode keybinds
+nnoremap <leader>g :Buffers<CR>
+nnoremap <silent> <C-P> :Files<CR>
+nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <leader>t :NERDTree<CR>
