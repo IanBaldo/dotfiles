@@ -1,6 +1,3 @@
-"Location: ~/.config/nvim/init.vim
-syntax on
-
 set noerrorbells "No error bells
 set tabstop=4 softtabstop=4 "TAB size
 set shiftwidth=4
@@ -15,7 +12,7 @@ set undofile
 set incsearch "Show results as you search
 
 set colorcolumn=90
-highlight ColorColumn ctermbg=0 guibg=lightgrey "Highlight the 80 char mark
+highlight ColorColumn ctermbg=0 guibg=lightgrey "Highlight the 90 char mark
 
 
 
@@ -31,6 +28,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
@@ -39,9 +37,28 @@ set background=dark
 
 let mapleader=" "
 
+let g:ctrlg_use_cache=0
+let g:ctrlp_use_cache=0
+let NERDTreeQuitOnOpen=1
 
-"normal mode keybinds
-nnoremap <leader>g :Buffers<CR>
-nnoremap <silent> <C-P> :Files<CR>
-nnoremap <silent> <C-p> :GFiles<CR>
+"Windows Commands
+nnoremap <silent> <leader>h :wincmd h<CR>
+nnoremap <silent> <leader>j :wincmd j<CR>
+nnoremap <silent> <leader>k :wincmd k<CR>
+nnoremap <silent> <leader>l :wincmd l<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>t :NERDTree<CR>
+
+"fzf
+nnoremap <leader>g :Buffers<CR>
+nnoremap <silent> <C-g> :Files<CR>
+nnoremap <silent> <C-p> :GFiles<CR>
+
+
+
+
